@@ -11,17 +11,34 @@ import Aside from "./Components/Aside";
 
 function App() {
   
+  let bodyContainerStyle = {
+    width: '50%',
+    marginLeft: '15%',
+    borderRight: "1px solid darkgrey",
+    borderBottom: "1px solid darkgrey",
+    height: '8rem'
+  }
+
   return (
     <>
-    <div>
-      <NavBar logo={logo}/>
-      <hr style={{margin: "0.5rem"}}/>
-    </div>
+    <div className="mainOutter">
 
-    <Aside/>  
+      <div className="forNavBar">
+        <NavBar logo={logo}/>
+        <hr style={{margin: "0.5rem"}}/>
+      </div>
 
-    <div className="container">
-      body
+      <div className="OutterBelowNavBar">
+        <Aside/>
+      
+        <div className="container forEditor" style={bodyContainerStyle}>
+          body
+        </div>
+
+        {/* <Aside/> */}
+
+      </div>
+    
     </div>
     </>
   );
