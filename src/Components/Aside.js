@@ -1,8 +1,8 @@
 import React from 'react'
+// import PropTypes from 'prop-types'
 
 
 export default function Aside() {
-
     const asideStyle={
         width:'15%',
         position: 'absolute',
@@ -10,6 +10,7 @@ export default function Aside() {
         borderBottom: "1px solid darkgrey",
         height: '8rem'
     }
+
 
     return (
         <>

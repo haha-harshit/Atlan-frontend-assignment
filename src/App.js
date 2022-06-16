@@ -4,21 +4,15 @@ import React from 'react';
 // import './App.css';
 import NavBar from './Components/NavBar';
 import Aside from "./Components/Aside";
-// import Container from 'react-bootstrap/Container'
-// import Row from 'react-bootstrap/Row'
-// import Col from 'react-bootstrap/Col'
-// import Header from './Components/Header';
 
 function App() {
   
   let bodyContainerStyle = {
     width: '50%',
     marginLeft: '15%',
-    borderRight: "1px solid darkgrey",
     borderBottom: "1px solid darkgrey",
     height: '8rem'
   }
-
   return (
     <>
     <div className="mainOutter">
@@ -35,7 +29,13 @@ function App() {
           body
         </div>
 
-        {/* <Aside/> */}
+        <aside style={{width: '35%', float: 'right', borderLeft: "1px solid darkgrey", borderBottom: "1px solid darkgrey", height: '8rem', marginTop:'-8rem'}}>
+
+                <h2>hey</h2>    
+                <p>para</p>
+                <p>para 2</p>
+                
+        </aside>
 
       </div>
     
