@@ -21,20 +21,7 @@ export default function Editor(props) {
     }
     return (
         <div className='editorContainer'>
-            
-            <ControlledEditor 
-                onBeforeChange={handleChange}
-                value={value}
-                className= "code-mirror-wrapper"
-                options={{
-                    lineWrapping: true,
-                    lint: true,
-                    mode: language,
-                    theme: 'material',
-                    lineNumbers: value
-                }}
-            />
-            
+        
         </div>
     )
 }
