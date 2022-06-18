@@ -1,34 +1,40 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Editor from './Editor';
 
-function BodyTabs() {
-    const [key, setKey] = useState('home');
-    
-    return (
-        <Tabs
-      id="controlled-tab-example"
-      activeKey={key}
-      onSelect={(k) => setKey(k)}
-      className="mb-3"
-    >
-      <Tab eventKey="home" title="Home">
-        {/* <Sonnet /> */}
-        <div className='editor-container' id='home'>
-          <Editor />
-        </div>
 
+function BodyTabs() {
+
+    return (
+    <>
+        <Tabs
+        defaultActiveKey="home"
+        id="uncontrolled-tab-example"
+        className="mb-3"
+        >
+      <Tab eventKey="home" title="Home">
+          <Editor
+          value="This is HOME" 
+        //   onChange={{}}
+          />
       </Tab>
+      
       <Tab eventKey="profile" title="Profile">
-        {/* <Sonnet /> */}
-        This is Profile
+          <Editor
+          value="This is Profile"
+        //   onChange={{}}
+          />
       </Tab>
+
       <Tab eventKey="contact" title="Contact">
-        {/* <Sonnet /> */}
-        Contact here
+          <Editor
+          value="Contact Here"
+        //   onChange={{}}
+          />
       </Tab>
     </Tabs>
+    </>
     )
 }
 

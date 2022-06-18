@@ -11,7 +11,6 @@ import {Controlled as ControlledEditor} from 'react-codemirror2'
 
 export default function Editor(props) {
     const {
-        language,
         value,
         onChange
     } = props
@@ -20,20 +19,21 @@ export default function Editor(props) {
         onChange(value)
     }
     return (
-        <div className='editorContainer'>
-        
-        <ControlledEditor 
+        // <div className='editorContainer'>
+        <>
+            <ControlledEditor 
                 onBeforeChange={handleChange}
                 value={value}
                 className= "code-mirror-wrapper"
                 options={{
                     lineWrapping: true,
                     lint: true,
-                    mode: language,
                     theme: 'material',
-                    lineNumbers: value
+                    lineNumbers: true,
+                    tabindex: "4"
                 }}
             />
-        </div>
+        </>
+        // </div>
     )
 }
