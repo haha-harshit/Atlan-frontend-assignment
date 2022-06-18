@@ -4,6 +4,7 @@ import React from 'react';
 // import './App.css';
 import NavBar from './Components/NavBar';
 import Aside from "./Components/Aside";
+import BodyTabs from "./Components/BodyTabs";
 
 function App() {
   
@@ -11,7 +12,8 @@ function App() {
     width: '50%',
     marginLeft: '15%',
     borderBottom: "1px solid darkgrey",
-    height: '8rem'
+    height: '8rem',
+    padding: '0rem 2rem'
   }
   return (
     <>
@@ -26,7 +28,7 @@ function App() {
         <Aside/>
       
         <div className="container forEditor" style={bodyContainerStyle}>
-          body
+          <BodyTabs/>
         </div>
 
         <aside style={{width: '35%', float: 'right', borderLeft: "1px solid darkgrey", borderBottom: "1px solid darkgrey", height: '8rem', marginTop:'-8rem'}}>
