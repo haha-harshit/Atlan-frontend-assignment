@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Editor from './Editor';
 
 
 function BodyTabs() {
+
+    const [Text, setText] = useState("")
 
     return (
     <>
@@ -15,21 +17,22 @@ function BodyTabs() {
         >
       <Tab eventKey="home" title="Home">
           <Editor
-          value="This is HOME" 
+          value={Text}
+          setText={setText}
         //   onChange={{}}
           />
       </Tab>
       
       <Tab eventKey="profile" title="Profile">
           <Editor
-          value="This is Profile"
+          value={Text}
         //   onChange={{}}
           />
       </Tab>
 
       <Tab eventKey="contact" title="Contact">
           <Editor
-          value="Contact Here"
+          value={Text}
         //   onChange={{}}
           />
       </Tab>

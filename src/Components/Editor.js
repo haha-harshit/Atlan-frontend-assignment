@@ -10,20 +10,20 @@ import 'codemirror/mode/css/css';
 import {Controlled as ControlledEditor} from 'react-codemirror2'
 
 export default function Editor(props) {
-    const {
-        value,
-        onChange
-    } = props
+    // const {
+    //     value,
+    //     onChange
+    // } = props
 
     function handleChange(editor, data, value){
-        onChange(value)
+        props.setText()
     }
     return (
         // <div className='editorContainer'>
         <>
             <ControlledEditor 
                 onBeforeChange={handleChange}
-                value={value}
+                value={props.value}
                 className= "code-mirror-wrapper"
                 options={{
                     lineWrapping: true,
