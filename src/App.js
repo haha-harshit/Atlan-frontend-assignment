@@ -5,33 +5,51 @@ import React from 'react';
 import NavBar from './Components/NavBar';
 import Aside from "./Components/Aside";
 import BodyTabs from "./Components/BodyTabs";
+import Editor from "./Components/Editor";
+import CodeMirror from 'codemirror';
+
 
 function App() {
+  
+  const inheritedHeight="inherit";
   
   let bodyContainerStyle = {
     width: '50%',
     marginLeft: '15%',
     borderBottom: "1px solid darkgrey",
-    height: '8rem',
+    height: '37rem',
     padding: '0rem 2rem'
   }
+
+  let rightAsideStyle = {width: '35%',
+    float: 'right',
+    borderLeft: "1px solid darkgrey",
+    borderBottom: "1px solid darkgrey",
+    marginTop: "-37rem",
+    height: inheritedHeight
+  }
+
   return (
     <>
     <div className="mainOutter">
 
-      <div className="forNavBar">
+      <div className="forNavBar" style={{height: '5rem'}}>
         <NavBar logo={logo}/>
         <hr style={{margin: "0.5rem"}}/>
       </div>
 
-      <div className="OutterBelowNavBar">
+      <div className="OutterBelowNavBar" style={{height: '37rem', marginTop: "4rem"}}>
         <Aside/>
       
         <div className="container forEditor" style={bodyContainerStyle}>
-          <BodyTabs/>
+          <div id="tabs" style={{height: inheritedHeight}}>
+            <BodyTabs/>
+          </div>
         </div>
 
-        <aside style={{width: '35%', float: 'right', borderLeft: "1px solid darkgrey", borderBottom: "1px solid darkgrey", height: '8rem', marginTop:'-8rem'}}>
+
+
+        <aside style={rightAsideStyle}>
 
                 <h2>hey</h2>    
                 <p>para</p>

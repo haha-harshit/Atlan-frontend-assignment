@@ -8,7 +8,7 @@ export default function Aside() {
         position: 'absolute',
         borderRight: "1px solid darkgrey",
         borderBottom: "1px solid darkgrey",
-        height: '8rem'
+        height: 'inherit'
     }
 
 
