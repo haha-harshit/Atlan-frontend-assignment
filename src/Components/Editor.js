@@ -13,6 +13,7 @@ import Form from 'react-bootstrap/Form';
 
 export default function Editor(props) {
 
+    let formStyle = {height: "7rem", resize: "none", backgroundColor: "whitesmoke"}
     // function handleChange(editor, data, value){
     //     props.setText(value)
     // }
@@ -37,7 +38,7 @@ export default function Editor(props) {
                 value: 'console.log("Hello, World");'
             })}  */}
 
-        <Form.Control as="textarea" placeholder="" style={{height: "7rem", resize: "none"}}/>
+        <Form.Control as="textarea" value={props.value} style={formStyle}/>
 
         </>
         // </div>

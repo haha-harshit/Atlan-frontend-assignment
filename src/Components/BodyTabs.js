@@ -13,30 +13,30 @@ function BodyTabs() {
     return (
     <>
         <Tabs
-        defaultActiveKey="home"
+        defaultActiveKey="customers"
         id="uncontrolled-tab-example"
         className="harshit mb-3"
         >
-            <Tab eventKey="home" title="Home">
+            <Tab eventKey="customers" title="Customers">
                 <Editor
-                // value={Text}
-                // setText={setText}
-                //   onChange={{}}
+                value="SELECT * FROM Customers;"
+                setText={setText}
+                
                 />
             </Tab>
       
-            <Tab eventKey="profile" title="Profile">
+            <Tab eventKey="categories" title="Categories">
                 <Editor
-                // value={Text}
-                // setText={setText}
+                value="SELECT * FROM Categories;"
+                setText={setText}
                 />
             </Tab>
 
-            <Tab eventKey="contact" title="Contact">
+            <Tab eventKey="employees" title="Employees">
                 <Editor
-                //     value={Text}
-                // //   onChange={{}}
-                //     setText={setText}
+                    value="SELECT * FROM Employees;"
+                    // onChange={{}}
+                    setText={setText}
                 />
             </Tab>
     </Tabs>
