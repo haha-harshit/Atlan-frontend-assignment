@@ -1,4 +1,4 @@
-import CodeMirror from 'codemirror';
+
 import React, {useState} from 'react'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
@@ -7,21 +7,24 @@ import Editor from './Editor';
 
 function BodyTabs() {
 
-
     const [Text, setText] = useState("")
 
     return (
     <>
         <Tabs
-        defaultActiveKey="customers"
+        defaultActiveKey=""
         id="uncontrolled-tab-example"
         className="harshit mb-3"
+        // onClick={handleTabClick}
+        // onClick={handleTabClick}
+        // onAbortCapture={handleAbort}
+        // onSelect={handleTabClick(activeKey)}
+        
         >
             <Tab eventKey="customers" title="Customers">
                 <Editor
                 value="SELECT * FROM Customers;"
                 setText={setText}
-                
                 />
             </Tab>
       

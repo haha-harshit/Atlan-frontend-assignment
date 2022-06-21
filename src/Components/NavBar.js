@@ -9,7 +9,7 @@ function NavBar(props) {
 
   return (
     <Nav
-      activeKey="/home"
+      // activeKey="/home"
     >
       <Nav.Item>
         <Nav.Link style={styles} href="/home"><h2><strong>SQL Editor</strong></h2><span style={{color:'#0a58ca'}}>powered by</span> <span><img style={{marginTop:"-4px"}} src={props.logo} height="60px" width="60px" alt="Atlan-logo" /></span></Nav.Link>
