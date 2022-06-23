@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import CodeMirror from 'codemirror';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/material.css';
@@ -17,6 +17,12 @@ export default function Editor(props) {
     // function handleChange(editor, data, value){
     //     props.setText(value)
     // }
+    const handleOnChange = (event) => {
+        setnewText(event.target.value)
+    }
+
+    const [newText, setnewText] = useState(props.value)
+
     return (
         // <div className='editorContainer'>
         <>
@@ -38,7 +44,7 @@ export default function Editor(props) {
                 value: 'console.log("Hello, World");'
             })}  */}
 
-        <Form.Control as="textarea" value={props.value} style={formStyle}/>
+        <Form.Control as="textarea" value={newText} style={formStyle} onChange={handleOnChange}/>
 
         </>
         // </div>
